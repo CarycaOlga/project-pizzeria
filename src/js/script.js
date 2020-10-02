@@ -90,29 +90,42 @@
 
       /* find the clickable trigger (the element that should react to clicking) */
 
+      const activeTrigger = document.querySelector('.product-name i');
+
       /* START: click event listener to trigger */
 
-      /* prevent default action for event */
+      const triggerClickHandler = function(event) {
 
-      /* toggle active class on element of thisProduct */
+        /* prevent default action for event */
 
-      thisProduct.element.classList.toggle('active');
+        event.preventDefault;
 
-      /* find all active products */
+        /* toggle active class on element of thisProduct */
 
-      
+        thisProduct.element.classList.toggle('select.menuProduct.clickable');
 
-      /* START LOOP: for each active product */
+        /* find all active products */
 
-      /* START: if the active product isn't the element of thisProduct */
+        const activeProducts = document.querySelectorAll('.product .active');
 
-      /* remove class active for the active product */
+        /* START LOOP: for each active product */
+        for(let activeProduct of activeProducts){
 
-      /* END: if the active product isn't the element of thisProduct */
+          /* START: if the active product isn't the element of thisProduct */
 
-      /* END LOOP: for each active product */
+          if(thisProduct.indexOf(activeProduct) == -1) {
+
+            /* remove class active for the active product */
+            activeProduct.classList.remove('active');
+
+            /* END: if the active product isn't the element of thisProduct */
+          }
+
+          /* END LOOP: for each active product */
+        }
 
       /* END: click event listener to trigger */
+      };
     }
   }
 
