@@ -90,23 +90,23 @@
 
       /* find the clickable trigger (the element that should react to clicking) */
 
-      const activeTrigger = document.querySelector('.product-name i');
+      const activeTrigger = document.querySelector(select.menuProduct.clickable);
 
       /* START: click event listener to trigger */
 
-      const triggerClickHandler = function(event) {
+      function addClickListenerToTrigger(event) {
 
         /* prevent default action for event */
 
-        event.preventDefault;
+        event.preventDefault();
 
         /* toggle active class on element of thisProduct */
 
-        thisProduct.element.classList.toggle('select.menuProduct.clickable');
+        thisProduct.classList.toggle('active');
 
         /* find all active products */
 
-        const activeProducts = document.querySelectorAll('.product .active');
+        const activeProducts = document.querySelectorAll(select.all.menuProductsActive);
 
         /* START LOOP: for each active product */
         for(let activeProduct of activeProducts){
@@ -124,8 +124,9 @@
           /* END LOOP: for each active product */
         }
 
-      /* END: click event listener to trigger */
-      };
+        /* END: click event listener to trigger */
+      }
+      addClickListenerToTrigger();
     }
   }
 
