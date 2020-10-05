@@ -175,9 +175,7 @@
 
           /* find selected options */
 
-          const selectedOption =
-          formData  &&
-          formData[paramId].indexOf(optionId) > -1;
+          const selectedOption = formData.hasOwnProperty(paramId) && formData[paramId].indexOf(optionId) > -1;
 
           /* START IF: if option is selected and option is not default */
 
@@ -195,7 +193,7 @@
 
             /* deduct price of option from price */
 
-            price-= option.price;
+            price -= option.price;
 
           /* END ELSE IF: if option is not selected and option is default */
           }
@@ -208,14 +206,9 @@
 
       }
 
-      /* multiply price by amount */
-
-      thisProduct.singlePrice = price;
-      thisProduct.price = thisProduct.singlePrice * thisProduct.amountWidget;
-
       /* insert price into thisProduct.priceElem */
 
-      thisProduct.priceElem.innerHTML = thisProduct.price;
+      thisProduct.priceElem.innerHTML = price;
     }
   }
 
