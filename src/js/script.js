@@ -195,30 +195,23 @@
             /* deduct price of option from price */
 
             price -= option.price;
+          }
+          /* END ELSE IF: if option is not selected and option is default */
 
-            /* END ELSE IF: if option is not selected and option is default */
+          /* END LOOP: for each optionId in param.options */
 
-            /* END LOOP: for each optionId in param.options */
+          const foundImages = thisProduct.imageWrapper.querySelectorAll('.' + paramId + '-' + optionId);
 
-            const foundImages = thisProduct.imageWrapper.querySelectorAll('.' + paramId + '-' + optionId);
-
-            if(selectedOption){
-              if(!thisProduct.params[paramId]){
-                thisProduct.params[paramId] = {
-                  label: param.label,
-                  options: {},
-                };
-              }
-              thisProduct.params[paramId].options[optionId] = option.label;
-              for(let foundImage of foundImages) {
-                foundImage.classList.add('active');
-              }
-            }else {
-              for(let foundImage of foundImages){
-                foundImage.classList.remove('active');
-              }
+          if(selectedOption){
+            for(let foundImage of foundImages) {
+              foundImage.classList.add('active');
+            }
+          } else {
+            for(let foundImage of foundImages){
+              foundImage.classList.remove('active');
             }
           }
+
 
           /* END LOOP: for each paramId in thisProduct.data.params */
 
