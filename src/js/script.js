@@ -253,15 +253,15 @@
           /* END LOOP: for each paramId in thisProduct.data.params */
 
         }
-
-        /* multiply price by amount */
-
-        price *= thisProduct.amountWidget.value;
-
-        /* insert price into thisProduct.priceElem */
-
-        thisProduct.priceElem.innerHTML = price;
       }
+      /* multiply price by amount */
+
+      price *= thisProduct.amountWidget.value;
+
+      /* insert price into thisProduct.priceElem */
+
+      thisProduct.priceElem.innerHTML = price;
+
     }
     initAmountWidget() {
       const thisProduct = this;
@@ -388,9 +388,9 @@
     init: function(){
       const thisApp = this;
       /*console.log('*** App starting ***');
-      console.log('thisApp:', thisApp);
+      console.log('thisApp:', thisApp);*/
       console.log('classNames:', classNames);
-      console.log('settings:', settings);
+      /*console.log('settings:', settings);
       console.log('templates:', templates);*/
 
       thisApp.initData();
