@@ -149,3 +149,5 @@ class Cart {
     thisCart.update();
   }
 }
+
+export default Cart;
