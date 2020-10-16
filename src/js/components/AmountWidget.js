@@ -1,6 +1,6 @@
 import{select, settings} from '../settings.js';
 
-class AmountWidget {
+export class AmountWidget {
   constructor(element) {
     const thisWidget = this;
 
