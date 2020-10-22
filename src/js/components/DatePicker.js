@@ -36,7 +36,7 @@ class DatePicker extends BaseWidget{
         }
       ],
       onChange : function(selectedDates, dateStr){
-        thisWidget.value = dateStr;
+        thisWidget.dom.input.value = dateStr;
       },
     });
   }
