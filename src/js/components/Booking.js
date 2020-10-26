@@ -5,10 +5,10 @@ import HourPicker from './HourPicker.js';
 import {utils} from '../utils.js';
 
 class Booking {
-  constructor(bookingContainer) {
+  constructor(element) {
     const thisBooking = this;
 
-    thisBooking.render(bookingContainer);
+    thisBooking.render(element);
 
     thisBooking.initWidgets();
 
@@ -128,6 +128,29 @@ class Booking {
         table.classList.remove(classNames.booking.tableBooked);
       }
     }
+  }
+  chooseTable() {
+    const thisBooking = this;
+    for(let table of thisBooking.dom.tables) {
+      table.addEventListener('click', function() {
+        if(table.classList.contains(classNames.booking.tableBooked)) {
+          alert('Table is already booked');
+        } else {
+          thisBooking.removeTable();
+          table.classList.add(classNames.booking.tableSelected);
+          const tableId = table.getAttribute(settings.booking.tableIdAttribute);
+          thisBooking.bookedTable = parseInt(tableId);
+        }
+      });
+    }
+  }
+  removeTable() {
+    const thisBooking = this;
+    const selectedTables = thisBooking.dom.wrapper.querySelectorAll(select.booking.tableSelected);
+    for(let selected of selectedTables) {
+      selected.classList.remove(classNames.booking.tableSelected);
+    }
+    delete thisBooking.bookedTable;
   }
   render(bookingContainer) {
     const thisBooking = this;
