@@ -7,12 +7,10 @@ import {utils} from '../utils.js';
 class Booking {
   constructor(element) {
     const thisBooking = this;
-
     thisBooking.render(element);
-
     thisBooking.initWidgets();
-
     thisBooking.getData();
+    thisBooking.chooseTable();
   }
   getData(){
     const thisBooking = this;
