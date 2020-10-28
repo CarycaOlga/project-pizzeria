@@ -5,12 +5,14 @@ export const select = {
     menuProduct: '#template-menu-product',
     cartProduct: '#template-cart-product', // CODE ADDED
     bookingWidget: '#template-booking-widget',
+    mainSite: '#template-main-site',
   },
   containerOf: {
     menu: '#product-list',
     cart: '#cart',
     pages: '#pages',
     booking: '.booking-wrapper',
+    main: '.main-site-wrapper',
   },
   all: {
     menuProducts: '#product-list > .product',
@@ -64,6 +66,12 @@ export const select = {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
+    tableSelected: '.selected',
+    phone: '.order-confirmation [type="tel"]',
+    address: '.order-confirmation [type="text"]',
+    submit: '.order-confirmation [type="submit"]',
+    starters: '[name="starter"]',
+    rangeSlider: '.rangeSlider',
   },
   nav: {
     links: '.main-nav a',
@@ -129,4 +137,5 @@ export const templates = {
   menuProduct: Handlebars.compile(document.querySelector(select.templateOf.menuProduct).innerHTML),
   cartProduct: Handlebars.compile(document.querySelector(select.templateOf.cartProduct).innerHTML),
   bookingWidget: Handlebars.compile(document.querySelector(select.templateOf.bookingWidget).innerHTML),
+  mainSite: Handlebars.compile(document.querySelector(select.templateOf.mainSite).innerHTML),
 };
