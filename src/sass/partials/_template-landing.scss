@@ -1,0 +1,21 @@
+.landing-wrapper {
+  margin-top: 20px;
+}
+.small-picture {
+  width: 50%;
+  img {
+    width: 100%;
+    height: 200px;
+  }
+  .skill-title {
+    text-align: center;
+  }
+}
+.splash {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  article {
+    flex: 0 0 50%;
+  }
+}
