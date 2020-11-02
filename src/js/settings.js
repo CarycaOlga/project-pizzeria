@@ -12,7 +12,7 @@ export const select = {
     cart: '#cart',
     pages: '#pages',
     booking: '.booking-wrapper',
-    main: '.main-site-wrapper',
+    landing: '.landing-wrapper',
   },
   all: {
     menuProducts: '#product-list > .product',

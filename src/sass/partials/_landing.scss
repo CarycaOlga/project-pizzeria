@@ -67,3 +67,64 @@
   transform: translate(-50%, +100%);
   visibility: hidden;
 }
+
+.aspect-ratio-keeper {
+  position: relative;
+  height: 0;
+  padding-top: 56.25%;
+}
+
+.glide-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.carousel {
+  display: flex;
+  padding-top: 50px;
+
+  .flex-1-div {
+    flex: 30%;
+    padding-right: 30px;
+
+    > img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  .flex-2-div {
+    flex: 70%;
+  }
+}
+
+.glide__bullets {
+  text-align: center;
+
+  .glide__bullet {
+    padding: 5px;
+    border-radius: 50%;
+    border-color: $color-dark;
+    border: none;
+    margin: 0 6px;
+  }
+
+  button {
+    background-color: lightgray;
+  }
+
+  .glide__bullet--active {
+    background-color: $color-dark;
+
+  }
+
+}
+
+//Displaying nav links and cart
+
+.inactive {
+  display: none;
+}
