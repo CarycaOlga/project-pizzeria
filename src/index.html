@@ -94,11 +94,48 @@
           </article>
         </div>
         <div class="carousel">
-      <div class="carousel-wrapper flex-1-div">
-        <img src="images/pizza/pizzeria-image.jpg" alt="Photo of people">
-      </div>
-      <div class="main-carousel">
-      </div>
+          <div class="carousel-wrapper flex-1-div">
+            <img src="images/pizza/pizzeria-image.jpg" alt="Photo of people">
+          </div>
+          <div class="carousel-image-wrapper flex-2-div">
+            <div class="aspect-ratio-keeper">
+              <div class="glide-wrapper">
+                <div class="glide">
+                  <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                      <li class="glide__slide">
+                        <div class="opinion-text">
+                          <h3>Delicious food!</h3>
+                          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus quia cupiditate eveniet quae architecto esse nisi alias accusamus id minus!</p>
+                          <p>-John Doe</p>
+                        </div>
+                      </li>
+                      <li class="glide__slide">
+                        <div class="opinion-text">
+                          <h3>Cheap prices!</h3>
+                          <p>Natus quia cupiditate eveniet quae architecto esse nisi alias accusamus id minus!</p>
+                          <p>-Jane Doe</p>
+                        </div>
+                      </li>
+                      <li class="glide__slide">
+                        <div class="opinion-text">
+                          <h3>Amazing place!</h3>
+                          <p>Quae architecto esse alias accusamus id minus!  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus quia cupiditate eveniet.</p>
+                          <p>-Kind Guest</p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
     <section id="order">
       <div id="product-list" class="product-list container"></div>
@@ -292,7 +329,6 @@
 
     </article> <!-- .product -->
   </script>
-  <script src="vendor/flickity.pkgd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="vendor/range-slider.min.js"></script>
